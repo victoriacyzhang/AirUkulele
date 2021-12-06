@@ -13,36 +13,19 @@ i2c = board.I2C()
 apds = APDS9960(i2c)
 myJoystick = qwiic_joystick.QwiicJoystick()
 myJoystick.begin()
-
 apds.enable_proximity = True
 
-c = False
-d = False
-e = False
-f = False
-g = False
-a = False
-b = False
+singles = ['audios/singles/c_single_40.wav', 'audios/singles/csharp_single_40.wav', 'audios/singles/d_single_40.wav', 'audios/singles/dsharp_single_40.wav', 'audios/singles/e_single_40.wav', 'audios/singles/f_single_40.wav', 'audios/singles/fsharp_single_40.wav', 'audios/singles/g_single_40.wav', 'audios/singles/gsharp_single_40.wav', 'audios/singles/a_single_40.wav', 'audios/singles/asharp_single_40.wav', 'audios/singles/b_single_40.wav', 'audios/singles/c5_single_40.wav']
 
-csound = 'audios/csound40.wav'
-dsound = 'audios/dsound.wav'
-esound = 'audios/esound.wav'
-fsound = 'audios/fsound.wav'
-gsound = 'audios/gsound.wav'
-asound = 'audios/asound.wav'
-bsound = 'audios/bsound.wav'
-
-
-
+dividend = 255 / (len(singles) - 1)
 while True:
-    if apds.proximity > 250:
-        c = True
+    currp = apds.proximity
+    index = int(currp // dividend)
+    if (index == 10) and ((currp % dividend) > 0):
+        index = index + 1
+    currSingleName = singles[index]
     if myJoystick.horizontal == 0:
-        if c:
-            print("yah!")
-            wave_obj = sa.WaveObject.from_wave_file(csound)
-            play_obj = wave_obj.play()
-            play_obj.wait_done()
-            print("done")
-    print(c)
-    time.sleep(0.2)
+        wave_obj = sa.WaveObject.from_wave_file(currSingleName)
+        play_obj = wave_obj.play()
+        play_obj.wait_done()
+    #time.sleep(0.2)
