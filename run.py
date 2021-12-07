@@ -46,6 +46,8 @@ ToF = qwiic.QwiicVL53L1X()
 
 singles = ['audios/singles/c_single_40.wav', 'audios/singles/csharp_single_40.wav', 'audios/singles/d_single_40.wav', 'audios/singles/dsharp_single_40.wav', 'audios/singles/e_single_40.wav', 'audios/singles/f_single_40.wav', 'audios/singles/fsharp_single_40.wav', 'audios/singles/g_single_40.wav', 'audios/singles/gsharp_single_40.wav', 'audios/singles/a_single_40.wav', 'audios/singles/asharp_single_40.wav', 'audios/singles/b_single_40.wav', 'audios/singles/c5_single_40.wav']
 
+majors = ['audios/majorchords/cmajor_40.wav', 'audios/majorchords/csharpmajor_40.wav', 'audios/majorchords/dmajor_40.wav', 'audios/majorchords/dsharpmajor_40.wav', 'audios/majorchords/emajor_40.wav', 'audios/majorchords/fmajor_40.wav', 'audios/majorchords/fsharpmajor_40.wav', 'audios/majorchords/gmajor_40.wav', 'audios/majorchords/gsharpmajor_40.wav', 'audios/majorchords/amajor_40.wav', 'audios/majorchords/asharpmajor_40.wav', 'audios/majorchords/bmajor_40.wav', 'audios/majorchords/c5major_40.wav']
+
 distanceRange = [30, 180]
 dividend = 150 / (len(singles) - 1)
 
@@ -78,8 +80,12 @@ while True:
         if (index == 11) and ((distance % dividend) > 0):
             index = index + 1
         currSingleName = singles[index]
+        currMajorName = majors[index]
         if (joystick.horizontal < 3) or (joystick.horizontal > 1022):
-            wave_obj = sa.WaveObject.from_wave_file(currSingleName)
+            if currButton:
+                wave_obj = sa.WaveObject.from_wave_file(currMajorName)
+            else:
+                wave_obj = sa.WaveObject.from_wave_file(currSingleName)
             play_obj = wave_obj.play()
             play_obj.wait_done()
         #print()
