@@ -35,6 +35,7 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 ## Parts:
 - 1 x Raspberry Pi 4
 - 1 x Adafruit APDS9960 Proximity, Light, RBG, Gesture Sensor
+- 1 s Webcam with Speaker
 - 1 x SparkFun Qwiic Button - Green LED
 - 1 x SparkFun Qwiic Joystick
 - 1 x SparkFun Qwiic Cable Kit
