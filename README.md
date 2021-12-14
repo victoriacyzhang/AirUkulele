@@ -7,7 +7,26 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 - There are three main parts in the Air Ukulele. The first component is the “fret”, represented by a proximity sensor. Instead of having four different strings and multiple frets like a traditional ukulele, the Air Ukulele recognizes pitches by the distance of the user’s hand to the proximity sensor. It resembles that of a theremin and adds a playful character to the Air Ukulele. The second component is the chord-switching button, represented by a qwiic button. By turning the qwiic button on, the LED will light up, signifying that the Air Ukulele has switched to chords mode, which will play the major chord of the corresponding pitch. The last component is the joystick. The joystick is used as a “strumming” tool, using the movability of the joystick to simulate the motion of a hand strumming on the instrument. All three of these parts work together to create the output sound.
 
 # Paper and Design Prototypes
+## Rough Idea:
+- My rough idea is as pictured, a cardboard ukulele that resembles the shape and size of an ukelele in real life. Here's a picture of my inspiration:
+- ![image](https://user-images.githubusercontent.com/35357433/145910125-a75cff0b-4f2f-44e2-8e05-db217fa8d838.png)
 
+## Paper Prototype 1:
+- In this stage, I envisioned the finished product to be very similar to a real ukulele, with fake strings and frets. Under each "fret", there would be a proximity sensor to detect whether or not the user intends to press there.
+- I also envisioned to use a camera to detect the motion and speed of user's hand gestures and classify whether the user intends to enter fingerpicking or chord modes. 
+- ![IMG_0373](https://user-images.githubusercontent.com/35357433/145911022-78d5dc03-c76d-4cab-91d7-6e72da598267.jpg)
+
+## Paper Prototype 2:
+- Based on my previous design, I would need tenths of proximity sensors, which I decided was not very economical. I then had an inspiration from the instrument [theremin](https://en.wikipedia.org/wiki/Theremin) and decided to use one proximity sensor to measure pitches. 
+- ![IMG_0374](https://user-images.githubusercontent.com/35357433/145911514-3689cfd4-d4d5-4494-96fa-6b7664570d70.jpg)
+
+## Paper Prototype 3:
+- Though I liked the idea of using a camera and computer vision to classify different motions of user's gestures, I decided that it might not be practical to do so because it can create a lot of lag in a program that requires fast feedback (otherwise the user would have to pause every time before playing a new note or switching to a new mode). I then turned my attention to a joystick, which embodies motion itself and is a great alternative. I decided to replace the camera with a joystick and call it a "strum" every time the joystick is pushed down.
+- ![IMG_0375](https://user-images.githubusercontent.com/35357433/145911993-e5b106e3-f4ca-4e1d-903a-e965bd35d725.jpg)
+
+## Paper Protype 4: 
+- Because I switched to using one proximity sensor instead of multiple, I now can't detect if user wants to press multiple notes to play a chord. I decided to add a button to switch back and forth from single note mode to chords mode. I placed the button on the buttom of the fingerboard because it makes sense to delegate the mode switching toe left hand, as in real ukulele playing, the left hand deals with all functions relating to selecting the notes to play. 
+- ![IMG_0376](https://user-images.githubusercontent.com/35357433/145912295-bea8fa8b-9ad8-4d8b-876a-1253c1cf3652.jpg)
 
 # State Diagram
 ![IMG_0372](https://user-images.githubusercontent.com/35357433/145909280-70f3cc91-6e10-4c67-bf55-27342230eee1.jpg)
