@@ -55,6 +55,7 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 - After testing and making sure the previous two steps work, I added the chord button. Each time the chord button is pressed, the ukulele switches the chord mode on and off. When the chord mode is on, the LED lights up as a feedback to the user. 
 
 ## Stages of Assembly:
+* I forgot to take pictures as how I built - sorry about that!
 ### Step 1 - cut out the shape:
 - In step 1, I used my ukulele at home to draw out the shape on a cardboard, and cut out two of it as front and back of the ukulele.
 
@@ -72,3 +73,4 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 - After logging into the pi via ssh, cd into the directory and run python run.py on the command line
 
 ## Final Product:
+https://user-images.githubusercontent.com/35357433/145913730-b3d78e47-befd-4a50-be49-6e5ce5052ada.mov
