@@ -10,7 +10,7 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 
 
 # State Diagram
-
+![IMG_0372](https://user-images.githubusercontent.com/35357433/145909280-70f3cc91-6e10-4c67-bf55-27342230eee1.jpg)
 
 # Assembly
 ## Parts:
@@ -24,6 +24,7 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 ### Part 1:
 - I was planning to download guitar/ukulele single note and chord audio online, but I wasn’t able to because most sites only have chord audios but not single note audios. Because of that, I looked for an alternative option, which is to play frequency sounds / Midi via a Python library. However, this method wouldn’t work well with guitar chords either because guitar chords are more like very fast 32nd notes rather than regular chords where all notes happen at the same time, which isn’t easy to simulate using Python. I ended up creating a score on Musescore with all the notes and sounds I would need, and I manually cut them later in an Audio Editing software. 
 - I only create notes from one octave (with sharps and flats) because otherwise the user's hand would have to extend very far in order to reach the higher registers. In order to maintain user experience, I decided to keep it in a shorter range.
+<img width="478" alt="Screen Shot 2021-12-13 at 7 15 39 PM" src="https://user-images.githubusercontent.com/35357433/145909561-3ea50e88-4609-4ea3-8e5c-786e99cb5fe1.png">
 
 ### Part 2:
 - I integrated the proximity sensor and the joystick, and played a note according to the proximity metric every time the joystick is turned near all the way up or down on the horizontal axis (allowing 3 points of difference in either direction). 
