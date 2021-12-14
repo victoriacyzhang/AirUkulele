@@ -73,4 +73,4 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 - After logging into the pi via ssh, cd into the directory and run python run.py on the command line
 
 ## Final Product:
-https://user-images.githubusercontent.com/35357433/145913730-b3d78e47-befd-4a50-be49-6e5ce5052ada.mov
+[Link to Demo](https://youtu.be/ARDd2502P3k)
