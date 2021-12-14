@@ -24,12 +24,12 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 ### Part 1:
 - I was planning to download guitar/ukulele single note and chord audio online, but I wasn’t able to because most sites only have chord audios but not single note audios. Because of that, I looked for an alternative option, which is to play frequency sounds / Midi via a Python library. However, this method wouldn’t work well with guitar chords either because guitar chords are more like very fast 32nd notes rather than regular chords where all notes happen at the same time, which isn’t easy to simulate using Python. I ended up creating a score on Musescore with all the notes and sounds I would need, and I manually cut them later in an Audio Editing software. 
 - I only create notes from one octave (with sharps and flats) because otherwise the user's hand would have to extend very far in order to reach the higher registers. In order to maintain user experience, I decided to keep it in a shorter range.
-<img width="478" alt="Screen Shot 2021-12-13 at 7 15 39 PM" src="https://user-images.githubusercontent.com/35357433/145909561-3ea50e88-4609-4ea3-8e5c-786e99cb5fe1.png">
+- <img width="478" alt="Screen Shot 2021-12-13 at 7 15 39 PM" src="https://user-images.githubusercontent.com/35357433/145909561-3ea50e88-4609-4ea3-8e5c-786e99cb5fe1.png">
 
 ### Part 2:
 - I integrated the proximity sensor and the joystick, and played a note according to the proximity metric every time the joystick is turned near all the way up or down on the horizontal axis (allowing 3 points of difference in either direction). 
 - I also controlled the range of proximity distance that the sensor picks up and recognizes. I limited it to about the length of half of my arm so that the user doesn’t have to stick their arms straight in order to catch the highest pitch that is available in the program. For proximity higher than the indicated highest range, I simply play the highest note available. Each note has an equal distance of proximity gap. 
-- While testing, I realized that playing the audio via the webcam speaker is much quieter than what I hear when I play them on my computer. To fix that, I used a Python library to increase each of the audio by 20 dB.
+- While testing, I realized that playing the audio via the webcam speaker is much quieter than what I hear when I play them on my computer. To fix that, I used a Python library to increase each of the audio by 20 dB. (via increaseAudio.py)
 
 ### Part 3:
 - After testing and making sure the previous two steps work, I added the chord button. Each time the chord button is pressed, the ukulele switches the chord mode on and off. When the chord mode is on, the LED lights up as a feedback to the user. 
@@ -47,5 +47,8 @@ In this project, I made an “Air Ukulele”. This “Air Ukulele” draws inspi
 ### Step 4 - connect the two boards and make it 3D
 - This was the most challenging process of the building experience. My plan was to use a long strip of cardboard, fold its width 3-way and use 2 outer ⅓ widths to glue to the front and back sides of the ukulele, leaving the middle ⅓ width as the height of the ukulele. However, the cardboard is much thicker than I anticipated, and it was very hard to use that to follow the curve of the ukulele board. Because of that, my sides ended up looking uneven and I had to use a lot of glue and tape in order to have all sides of the ukulele sticking firmly together. 
 - I decided to add cotton balls on the sides of the ukulele in order to mask the unevenness of the side boards, and I added two “eyes” on the front board to add on to the playful element. 
+
+## Executing the Program:
+- After logging into the pi via ssh, cd into the directory and run python run.py on the command line
 
 ## Final Product:
